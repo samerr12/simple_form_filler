@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Form Filler",
+  "version": "0.1",
+  "description": "Auto-complete forms with a file",
+  "icons": {
+    "48": "icons/icon.png"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "action": {
+    "default_icon": "icons/icon.png",
+    "default_title": "form_filler",
+    "default_popup": "popup/popup_Main.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "<all_urls>"    
+  ]
+}
