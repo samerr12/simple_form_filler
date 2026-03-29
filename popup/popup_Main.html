@@ -13,11 +13,28 @@
 <body>
     <header>
         <h2>Auto Fill Form</h2>
+        <h4>A simple form filler because I'm lazy</h4>
     </header>
 
-    <div class="file_upload_container">
+    <div class="file_upload_container" id="file-upload-btn">
         <img src="" alt="">
         <label for="">Upload .xlxs / .csv</label>
+        <input type="file" id="file-upload" accept=".xlsx, .csv" style="display: none;">
     </div>
+
+    <div class="bottom_container">
+        <section style="display: none;">
+            <div class="btn_lineoption" id="btn_lineBack">Back</div>
+            <div class="btn_lineoption" id="btn_lineForward">Next</div>
+        </section>
+        <section class="btn_lineoption reset" id="btn_lineReset">
+            <p>Reset</p>
+        </section>
+        <section class="btn_lineoption" id="btn_lineStart">
+            <p>Start</p>
+        </section>
+    </div>
+
+    <script src="popup.js"></script>
 </body>
 </html>

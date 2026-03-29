@@ -7,18 +7,96 @@
     body {
         width: 350px;
         height: 400px;
-        background-color: white;
+        background-color: rgb(248, 248, 248);
     }
         header {
-            text-align: center;
-            margin: 1rem auto;
+            text-align: left;
+            margin: 1rem 1rem;
         }
+            header h4 {
+                font-weight: normal;
+                font-size: 1rem;
+                color: #555;
+            }
 
         .file_upload_container {
             margin: 1rem;
-            padding: 0.5rem;
-            border-radius: 0.5rem;
-            border-style: dashed;
+            padding: 1rem 0.5rem;
+            width: calc(100%-2rem);
             text-align: center;
             cursor: pointer;
+            transition: transform 0.3s ease;
+            border-radius: 0.3rem;
+            background: linear-gradient(90deg, #ececec 50%, transparent 50%),
+                linear-gradient(90deg, #ececec 50%, transparent 50%),
+                linear-gradient(0deg, #ececec 50%, transparent 50%),
+                linear-gradient(0deg, #ececec 50%, transparent 50%);
+            background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+            background-size: 15px 4px, 15px 4px, 4px 15px, 4px 15px;
+            background-position: left top, right bottom, left bottom, right top;
+            background-color: white;
         }
+            .file_upload_container label {
+                width: 100%;
+                cursor: pointer;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+            .file_upload_container:hover {
+                transform: scale(1.02);
+                animation: border-dance 2s infinite ease-out;
+                background-color: 2s #d7ffd4;
+            }
+            .file_upload_container:active {
+                transform: scale(0.95);
+            }
+
+        @keyframes border-dance {
+            0% {
+                background-position: left top, right bottom, left bottom, right top;
+            }
+            100% {
+                background-position: left 150px top, right 150px bottom, left bottom 150px, right top 150px;
+            }
+        }
+
+        .bottom_container {
+            width: calc(100% - 2rem);
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            right: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            justify-content: space-between;
+        }
+            .bottom_container section {
+                width: 50%;
+                display: flex;
+                gap: 0.5rem;
+                padding: 0.5rem;
+            }
+                .btn_lineoption {
+                    width: 50%;
+                    height: 25px;
+                    text-align: center;
+                    background-color: #7DFF75;
+                    border-radius: 0.5rem;
+                    cursor: pointer;
+                    transition: transform 0.2s ease;
+                }
+                    .btn_lineoption p {
+                        width: 100%;
+                        margin: auto;
+                    }
+                    #btn_lineReset {
+                        background-color: #ff7575;
+                    } 
+                    .btn_lineoption:hover {
+                        transform: scale(1.03);
+                    }
+                    .btn_lineoption:active {
+                        transform: scale(1.0);
+                    }
