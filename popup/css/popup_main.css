@@ -79,8 +79,8 @@
                 padding: 0.5rem;
             }
                 .btn_lineoption {
-                    width: 50%;
-                    height: 25px;
+                    width: 100%;
+                    height: 20px;
                     text-align: center;
                     background-color: #7DFF75;
                     border-radius: 0.5rem;
@@ -92,8 +92,16 @@
                         margin: auto;
                     }
                     #btn_lineReset {
-                        background-color: #ff7575;
-                    } 
+                        width: 25%;
+                        background-color: #ffdcdc;
+                    }
+                        #btn_lineReset p {
+                            color: #ff0000;
+                        }
+                        #btn_lineReset:hover {
+                            background-color: #ffbaba;
+                            transition: 0.2s ease;
+                        }
                     .btn_lineoption:hover {
                         transform: scale(1.03);
                     }
