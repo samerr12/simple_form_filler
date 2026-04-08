@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Mina:wght@400;700&family=Poppins&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="/popup/css/popup_main.css">
+    <script src="xlsx.full.min.js"></script>
     <title>Form Filler</title>
 </head>
 <body>
@@ -18,15 +19,16 @@
 
     <div class="file_upload_container" id="file-upload-btn">
         <img src="" alt="">
-        <label for="">Upload .xlxs / .csv</label>
+        <label for="">Upload .xlsx / .csv</label>
         <input type="file" id="file-upload" accept=".xlsx, .csv" style="display: none;">
     </div>
 
     <div class="ID_map_container" id="ID_map_container" style="display: none;">
-        <div style="display: flex;">
+        <div class="id_area_container" style="display: flex;">
             <input type="text" placeholder="Enter ID">
             <img src="" alt="trash">
         </div>
+        <button id="add-id-btn">Add ID</button>
     </div>
 
     <div class="bottom_container">
